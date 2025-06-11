@@ -6,7 +6,7 @@ import { ChevronDown, Github, Linkedin, Mail, Phone, Code, Shield, Zap } from 'l
 
 export const Hero = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },    
     visible: {
       opacity: 1,
       transition: {
