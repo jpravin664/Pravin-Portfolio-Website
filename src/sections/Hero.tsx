@@ -151,8 +151,8 @@ export const Hero = () => {
                 >
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-primary/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
-                    <Mail size={18} sm:size={20} />
-                    <span className="font-medium">Let's Connect</span>
+                    <Mail size={18} sm:size={20} color="black"/>
+                    <span className="font-medium text-black">Let's Connect</span>
                   </div>
                 </motion.a>
                 
@@ -166,8 +166,8 @@ export const Hero = () => {
                 >
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-accent/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
-                    <Github size={18} sm:size={20} />
-                    <span className="font-medium">View Work</span>
+                    <Github size={18} sm:size={20} color="black"/>
+                    <span className="font-medium text-black">View Work</span>
                   </div>
                 </motion.a>
               </motion.div>
@@ -236,7 +236,7 @@ export const Hero = () => {
                       PJ
                     </motion.div>
                     
-                    <div className="space-y-1 sm:space-y-2 font-mono text-xs sm:text-xs text-text-secondary">
+                    <div className="space-y-1 sm:space-y-2 font-mono text-sm sm:text-sm text-text-secondary">
                       <div className="text-accent">{"{ secure: true }"}</div>
                       <div className="text-primary">{"[ innovative ]"}</div>
                       <div className="text-glow">{"< creative />"}</div>
@@ -245,7 +245,7 @@ export const Hero = () => {
                   
                   {/* Floating Code Snippets - Responsive positioning */}
                   <motion.div
-                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-6 md:left-6 font-mono text-xs text-primary/60"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-6 md:left-6 font-mono text-s text-primary/60"
                     animate={{ y: [-5, 5, -5] }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
@@ -254,7 +254,7 @@ export const Hero = () => {
                   </motion.div>
                   
                   <motion.div
-                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 font-mono text-xs text-accent/60"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 font-mono text-s text-accent/60"
                     animate={{ y: [5, -5, 5] }}
                     transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                   >
