@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, Code, Layers, Home, User, Briefcase, GraduationCap, Mail } from 'lucide-react';
+import { Menu, X, Code, Layers, Home, User, Briefcase, Award, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
@@ -22,14 +22,14 @@ export const Navbar = () => {
     { name: 'About', to: 'about', icon: <User className="w-4 h-4" /> },
     { name: 'Projects', to: 'projects', icon: <Code className="w-4 h-4" /> },
     { name: 'Skills', to: 'skills', icon: <Layers className="w-4 h-4" /> },
-    { name: 'Education', to: 'education', icon: <GraduationCap className="w-4 h-4" /> },
+    { name: 'Certification', to: 'education', icon: <Award className="w-4 h-4" /> },
     { name: 'Contact', to: 'contact', icon: <Mail className="w-4 h-4" /> }
-  ];
+  ]; 
 
   return (
     <motion.header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'py-2 backdrop-blur-md bg-background/80 border-b border-app-border/30' : 'py-4 bg-transparent'
+        scrolled ? 'py-2 backdrop-blur-md bg-background/80 border-b border-app-border/30' : 'py-4 bg-gray-900'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
