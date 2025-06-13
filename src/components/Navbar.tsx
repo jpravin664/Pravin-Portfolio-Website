@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, Code, Layers, Home, User, Briefcase, Award, Mail } from 'lucide-react';
+import { Menu, X, Code, Layers, Home, User, Award, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
@@ -24,7 +24,7 @@ export const Navbar = () => {
     { name: 'Skills', to: 'skills', icon: <Layers className="w-4 h-4" /> },
     { name: 'Certification', to: 'education', icon: <Award className="w-4 h-4" /> },
     { name: 'Contact', to: 'contact', icon: <Mail className="w-4 h-4" /> }
-  ]; 
+  ];  
 
   return (
     <motion.header 
