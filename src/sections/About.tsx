@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Code, Server, Cpu, Lock, Terminal } from 'lucide-react';
-// import profilePic from '../image/ProfilePhoto.jpg';
+import profilePic from '../image/ProfilePhoto2.jpg';
 
 export const About = () => {
   return (
@@ -38,7 +38,7 @@ export const About = () => {
                   {/* Square Profile Photo Container */}
       <div className="w-80 h-90 rounded-lg overflow-hidden mb-6 border-2 border-app-border/30">
         <img 
-          src=""
+          src={profilePic}
           alt="Profile" 
           className="w-full h-full object-cover"
         />

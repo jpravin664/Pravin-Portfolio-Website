@@ -42,12 +42,15 @@ export const Education = () => {
               <span className="text-gradient">Certifications</span> & Activities
             </h2>
           </div>
-           <motion.div 
+          
+              <motion.div 
             className="w-32 h-1 bg-gradient-to-r from-primary via-accent to-primary mx-auto rounded-full mb-8"
             initial={{ width: 0 }}
             whileInView={{ width: 128 }}
+            viewport={{ once: false }} // This makes it reset when exiting/re-entering view
             transition={{ duration: 0.8, delay: 0.4 }}
-          ></motion.div>
+        ></motion.div>
+          
           <p className="text-text-secondary max-w-2xl mx-auto">
             Professional certifications and volunteer activities that complement my technical journey
           </p>
