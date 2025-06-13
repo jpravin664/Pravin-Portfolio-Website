@@ -79,7 +79,15 @@ export const Contact = () => {
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
               Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Touch</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+            
+            <motion.div 
+            className="w-32 h-1 bg-gradient-to-r from-primary via-accent to-primary mx-auto rounded-full mb-8"
+            initial={{ width: 0 }}
+            whileInView={{ width: 128 }}
+            viewport={{ once: false }} // This makes it reset when exiting/re-entering view
+            transition={{ duration: 0.8, delay: 0.4 }}
+        ></motion.div>
+            
           </div>
           <motion.p 
             className="text-lg text-text-secondary max-w-2xl mx-auto mt-6 leading-relaxed"
