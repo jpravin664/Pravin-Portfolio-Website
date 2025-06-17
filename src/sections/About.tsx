@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Code, Server, Cpu, Lock, Terminal, GraduationCap } from 'lucide-react';
-import profilePic from '../image/ProfilePhoto2.jpg';
+
  
 export const About = () => {
   const educationItems = [
@@ -57,7 +57,7 @@ export const About = () => {
                 {/* Large Portrait Photo Container */}
                 <div className="w-90 h-[26rem] sm:h-[38rem] rounded-lg overflow-hidden mb-6 border-2 border-app-border/30 shadow-md">
                   <img 
-                    src={profilePic}
+                    src="/image/ProfilePhoto.jpg"
                     alt="Profile" 
                     className="w-full h-full object-cover object-top"
                   />
