@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Phone, Code, Shield, Zap } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Phone, Code, Shield, Zap, FileText } from 'lucide-react';
 
 export const Hero = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },    
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
@@ -34,6 +34,8 @@ export const Hero = () => {
     { icon: Shield, position: "top-32 right-32", delay: 1 },
     { icon: Zap, position: "bottom-40 left-16", delay: 2 },
   ];
+
+ 
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden pt-20">
@@ -122,7 +124,7 @@ export const Hero = () => {
                         2000,
                       ]}
                       wrapper="span"
-                      speed={50}
+                      speed={60}
                       repeat={Infinity}
                     />
                   </div>
@@ -143,16 +145,18 @@ export const Hero = () => {
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4"
                 variants={itemVariants}
               >
-                <motion.a 
-                  href="mailto:manopravin1@gmail.com" 
+              <motion.a
+                  href="/documents/PRAVIN J Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group glass-card px-6 sm:px-8 py-3 sm:py-4 rounded-2xl border border-primary/30 hover:border-primary/60 transition-all relative overflow-hidden text-center sm:text-left"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-primary/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
-                    <Mail size={18} sm:size={20} color="black"/>
-                    <span className="font-medium text-black">Let's Connect</span>
+                    <FileText size={18} color="black"/>
+                    <span className="font-medium text-black">View Resume</span>
                   </div>
                 </motion.a>
                 
@@ -166,7 +170,7 @@ export const Hero = () => {
                 >
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-accent/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
-                    <Github size={18} sm:size={20} color="black"/>
+                    <Github size={18} color="black"/>
                     <span className="font-medium text-black">View Work</span>
                   </div>
                 </motion.a>
@@ -267,7 +271,7 @@ export const Hero = () => {
 
          {/* Social Links Bar */}
 <motion.div 
-  className="mt-8 sm:mt-8 sm:mb-16 flex justify-center"
+  className="mt-8 sm:mt-8 mb-14 flex justify-center"
   variants={itemVariants}
 >
   <div className="relative group">
@@ -350,9 +354,9 @@ export const Hero = () => {
             transition={{ repeat: Infinity, duration: 2 }}
             className="group-hover:text-primary transition-colors"
           >
-            <ChevronDown size={22} />
+            <ChevronDown size={22}/>
           </motion.div>
-          <span className="text-text-secondary text-xs mt-2 group-hover:text-primary transition-colors">
+          <span className="text-text-secondary text-xs mt-4 group-hover:text-primary transition-colors">
             Explore More
           </span>
         </Link>
