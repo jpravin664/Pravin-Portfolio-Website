@@ -99,7 +99,7 @@ export const Hero = () => {
               {/* Main Heading */}
               <div className="space-y-3 md:space-y-4">
                 <motion.h1 
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none"
+                  className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none"
                   variants={itemVariants}
                 >
                   <span className="block text-text-primary">Hello,</span>
@@ -136,8 +136,8 @@ export const Hero = () => {
                 className="text-base sm:text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl"
                 variants={itemVariants}
               >
-                Transforming digital landscapes through cutting-edge cybersecurity solutions 
-                and innovative web development. Let's build something extraordinary together.
+                I’m learning to blend cybersecurity and development, trying to build secure and                   scalable solutions.  <br />
+                Let’s create something meaningful — and shape a safer digital future.
               </motion.p>
 
               {/* CTA Buttons */}
