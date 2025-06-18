@@ -36,24 +36,24 @@ export const Contact = () => {
 
   const codingProfiles = [
     {
-      icon: <Code size={20} />,
-      label: "LeetCode",
-      value: "leetcode.com/pravinj",
-      href: "https://leetcode.com/pravinj",
-      color: "primary"
-    },
-    {
       icon: <Trophy size={20} />,
       label: "CodeChef",
-      value: "codechef.com/users/pravinj64",
-      href: "https://www.codechef.com/users/pravinj64",
+      value: "codechef.com/users/jpravin864",
+      href: "https://www.codechef.com/users/jpravin864",
       color: "accent"
     },
-    {
+     {
       icon: <Target size={20} />,
       label: "GeeksforGeeks",
-      value: "geeksforgeeks.org/user/pravinj",
-      href: "https://auth.geeksforgeeks.org/user/pravinj",
+      value: "geeksforgeeks.org/user/jpravin64/",
+      href: "https://www.geeksforgeeks.org/user/jpravin64/",
+      color: "primary"
+    },
+     {
+      icon: <Code size={20} />,
+      label: "LeetCode",
+      value: "leetcode.com/u/manopravin1/",
+      href: "https://leetcode.com/u/manopravin1/",
       color: "primary"
     }
   ];
