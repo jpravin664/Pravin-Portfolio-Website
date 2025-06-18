@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Code, Server, Cpu, Lock, Terminal, GraduationCap } from 'lucide-react';
-
+//import profilePic from '../image/ProfilePhoto2.jpg';
  
 export const About = () => {
   const educationItems = [
@@ -27,7 +27,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-4xl font-bold mb-4 text-text">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-text">
             About Me
           </h2>
          <motion.div 
@@ -97,13 +97,15 @@ export const About = () => {
                 <h3 className="text-xl font-semibold mb-4 text-text">My Journey</h3>
                 <div className="space-y-4 text-text-secondary">
                   <p>
-                    My fascination with technology began early, taking apart computers and writing my first programs as a teenager. 
-                    This curiosity evolved into a dual passion for both creating software and understanding how to protect it.
+                    I’ve been curious about technology since I was a kid — taking apart computers and writing my first bits of code just for fun.  
+  Over time, that curiosity grew into a passion for not just building software, but also learning how to protect it.
                   </p>
                   <p>
-                    Currently pursuing my <span className="font-medium text-primary">B.Tech in Computer Science</span> with a focus on 
-                    <span className="font-medium text-accent"> Cyber Security</span> at SRM University. While developing my cybersecurity skills, I maintain strong foundations in frontend development and am expanding into backend systems and machine learning.
-                  </p>
+                  I'm currently pursuing my <span className="font-medium text-primary">B.Tech in Computer Science</span> with a focus on 
+                  <span className="font-medium text-accent"> Cyber Security</span> at SRM University.  
+                  Along the way, I’ve been building a solid foundation in frontend development, while exploring backend systems and diving into machine learning.
+                </p>
+
                 </div>
               </div>
 
@@ -113,7 +115,7 @@ export const About = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-background-light p-4 rounded-lg border border-app-border/30"
+                    className="bg-indigo-900/60 p-4 rounded-lg border border-app-border/30"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Terminal className="text-primary" size={18} />
@@ -126,7 +128,7 @@ export const About = () => {
 
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-background-light p-4 rounded-lg border border-app-border/30"
+                    className="bg-indigo-900/60 p-4 rounded-lg border border-app-border/30"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Shield className="text-accent" size={18} />
@@ -139,7 +141,7 @@ export const About = () => {
 
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-background-light p-4 rounded-lg border border-app-border/30"
+                    className="bg-indigo-900/60 p-4 rounded-lg border border-app-border/30"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Server size={18} className="text-glow" />
@@ -152,7 +154,7 @@ export const About = () => {
 
                   <motion.div 
                     whileHover={{ scale: 1.02 }}
-                    className="bg-background-light p-4 rounded-lg border border-app-border/30"
+                    className="bg-indigo-900/60 p-4 rounded-lg border border-app-border/30"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <Code className="text-primary" size={18} />
