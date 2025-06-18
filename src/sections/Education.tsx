@@ -30,7 +30,7 @@ export const Education = () => {
     <section id="education" className="py-20 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }} 
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
@@ -46,7 +46,7 @@ export const Education = () => {
               <motion.div 
             className="w-32 h-1 bg-gradient-to-r from-primary via-accent to-primary mx-auto rounded-full mb-8"
             initial={{ width: 0 }}
-            whileInView={{ width: 128 }}
+            whileInView={{ width: 220 }}
             viewport={{ once: false }} // This makes it reset when exiting/re-entering view
             transition={{ duration: 0.8, delay: 0.4 }}
         ></motion.div>
@@ -63,7 +63,7 @@ export const Education = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-background/50 p-8 rounded-2xl border border-accent/20 shadow-lg"
+              className="bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/70 p-8 rounded-2xl border border-accent/20 shadow-lg"
             >
               <div className="flex items-center gap-3 mb-8">
                 <div className="p-2 rounded-lg bg-accent/10 text-accent">
@@ -76,7 +76,7 @@ export const Education = () => {
                 {certifications.map((cert, index) => (
                   <motion.div
                     key={index}
-                    className="p-4 rounded-xl bg-background border border-accent/10 hover:border-accent/30 transition-all"
+                    className="p-4 rounded-xl bg-gray-600/40 border border-accent/10 hover:border-accent/30 transition-all"
                     whileHover={{ y: -2 }}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export const Education = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-background/50 p-8 rounded-2xl border border-primary/20 shadow-lg"
+              className="bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/70 p-8 rounded-2xl border border-primary/20 shadow-lg"
             >
               <div className="flex items-center gap-3 mb-8">
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
@@ -116,7 +116,7 @@ export const Education = () => {
 
               <div className="space-y-4">
                 <motion.div 
-                  className="p-5 rounded-xl bg-background border border-primary/10 hover:border-primary/30 transition-all"
+                  className="p-5 rounded-xl bg-gray-600/40 border border-primary/10 hover:border-primary/30 transition-all"
                   whileHover={{ scale: 1.01 }}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export const Education = () => {
                 </motion.div>
 
                 <motion.div 
-                  className="p-5 rounded-xl bg-background border border-primary/10 hover:border-primary/30 transition-all"
+                  className="p-5 rounded-xl bg-gray-600/40 border border-primary/10 hover:border-primary/30 transition-all"
                   whileHover={{ scale: 1.01 }}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
