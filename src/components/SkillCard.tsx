@@ -31,7 +31,7 @@ export const SkillCard = ({ category, skills, icon, index }: SkillCardProps) => 
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 group-hover:bg-pos-100 opacity-0 group-hover:opacity-100 transition-all duration-1000 rounded-3xl blur-sm animate-gradient-x"></div>
       
       {/* Main card container */}
-      <div className="glass-card relative h-full rounded-3xl backdrop-blur-xl bg-gradient-to-br from-background/80 via-background/60 to-background/40 border border-white/10 group-hover:border-white/30 transition-all duration-500 shadow-xl group-hover:shadow-2xl">
+    <div className="relative h-full rounded-3xl backdrop-blur-xl bg-gradient-to-br from-purple-900/40 via-indigo-900/20 to-purple-900/40 border border-purple-400/10 group-hover:border-purple-800/30 transition-all duration-500 shadow-xl group-hover:shadow-2xl">
         
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -98,7 +98,7 @@ export const SkillCard = ({ category, skills, icon, index }: SkillCardProps) => 
                 {/* Skill item border highlight */}
                 <div className="absolute inset-0 border border-transparent group-hover/skill:border-primary/20 rounded-xl transition-all duration-300"></div>
                 
-                <div className="relative p-3 rounded-xl bg-background/30 backdrop-blur-sm border border-white/5 group-hover/skill:border-white/20 transition-all duration-300 hover:bg-background/50">
+                <div className="relative p-3 rounded-xl bg-background/70 backdrop-blur-sm border border-white/10 group-hover/skill:border-white/20 transition-all duration-300 hover:bg-background/80">
                   {/* Skill text */}
                   <div className="text-sm font-medium text-text-secondary group-hover/skill:text-primary transition-colors duration-300 flex items-center gap-2">
                     {/* Bullet point */}
@@ -120,5 +120,4 @@ export const SkillCard = ({ category, skills, icon, index }: SkillCardProps) => 
       </div>
     </motion.div>
   );
-};
-
+}; 
