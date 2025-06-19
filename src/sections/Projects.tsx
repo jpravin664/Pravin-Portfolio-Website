@@ -17,7 +17,7 @@ export const Projects = () => {
     "Achieved <1s latency and real-time alerts across Chrome, Edge, and Firefox"
   ],
   github: "https://github.com/jpravin664",
-  live: "https:", // Add if deployed
+  live: "", // Add if deployed
   index: 0
 },
     {
