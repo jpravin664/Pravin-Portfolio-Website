@@ -9,6 +9,7 @@ import { Contact } from './sections/Contact';
 import { Footer } from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { Loader } from './components/Loader';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [loading, setLoading] = useState(true);
