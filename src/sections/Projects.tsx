@@ -9,7 +9,7 @@ export const Projects = () => {
   title: "Real-Time Phishing Detection Browser Extension",
   description: "A robust browser extension for phishing detection using machine learning and real-time threat intelligence APIs, delivering fast and accurate classification with visual alerts.",
   icon: <Globe className="text-yellow-400" size={28} />,
-  image: "/images/projects/phishing-extension.png",
+  image: "/image/projects/phishing-extension.jpg",
   technologies: ["Random Forest", "Python", "Google Safe Browsing API", "PhishTank", "Kaggle Dataset"],
   points: [
     "Developed a cross-browser extension that detects phishing websites using a trained Random Forest model",
@@ -24,7 +24,7 @@ export const Projects = () => {
   title: "ShadowCrypt - Secure File Hider",
   description: "A powerful data protection tool combining AES-256 encryption and steganography to securely hide sensitive files inside images, ensuring both confidentiality and integrity.",
   icon: <Lock className="text-purple-500" size={28} />,
-  image: "/images/projects/shadowcrypt.png",
+  image: "/image/projects/shadowcrypt.png",
   technologies: ["Python", "Flask", "AES-256", "Steganography", "HMAC"],
   points: [
     "Implements AES-256 encryption for strong data security",
@@ -41,14 +41,14 @@ export const Projects = () => {
   title: "Resume Analyzer Web Application",
   description: "Web-based resume analyzer that uses NLP to parse and evaluate resumes, calculate ATS scores, and match them against job descriptions with real-time insights.",
   icon: <FileText className="text-green-500" size={28} />,
-  image: "/images/projects/resume-analyzer.png",
+  image: "/image/projects/resume-analyzer.png",
   technologies: ["Python", "Flask", "NLP", "Resume Parsing", "ATS"],
   points: [
     "Built a Flask-based app enabling resume upload and analysis using NLP parsing",
     "Implemented ATS score and JD-matching logic for resume relevance evaluation",
     "Provided real-time feedback and multi-format file support"
   ],
-  github: "https://github.com/jpravin664",
+  github: "https://github.com/jpravin664/AI-Resume-analyzer",
   live: "", // Add if deployed
   index: 2
 },
