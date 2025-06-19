@@ -31,7 +31,10 @@ export const SkillCard = ({ category, skills, icon, index }: SkillCardProps) => 
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 group-hover:bg-pos-100 opacity-0 group-hover:opacity-100 transition-all duration-1000 rounded-3xl blur-sm animate-gradient-x"></div>
       
       {/* Main card container */}
-    <div className="relative h-full rounded-3xl backdrop-blur-xl bg-gradient-to-br from-purple-900/40 via-indigo-900/20 to-purple-900/40 border border-purple-400/10 group-hover:border-purple-800/30 transition-all duration-500 shadow-xl group-hover:shadow-2xl">
+   <div className="relative h-full rounded-3xl backdrop-blur-xl 
+bg-gradient-to-br from-purple-900/70 via-indigo-900/50 to-purple-800/60 
+border border-purple-300/20 group-hover:border-purple-500/40 
+transition-all duration-500 shadow-lg group-hover:shadow-purple-500/20">
         
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
