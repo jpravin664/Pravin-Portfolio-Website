@@ -161,7 +161,7 @@ export const About = () => {
                       <span className="font-medium text-text">Programming</span>
                     </div>
                     <p className="text-sm text-text-secondary">
-                      Python, JavaScript, Java, C/C++ with focus on algorithms and problem-solving.
+                      Python, JavaScript, C/C++ with focus on algorithms and problem-solving.
                     </p>
                   </motion.div>
                 </div>

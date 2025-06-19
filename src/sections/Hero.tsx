@@ -156,7 +156,7 @@ export const Hero = () => {
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-primary/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
                     <FileText size={18} color="black"/>
-                    <span className="font-medium text-black">View Resume</span>
+                    <span className="font-medium text-black">View my Resume</span>
                   </div>
                 </motion.a>
                 
@@ -171,7 +171,7 @@ export const Hero = () => {
                   <div className="absolute inset-0 bg-sunset-gradient group-hover:bg-accent/10 transition-colors"></div>
                   <div className="relative flex items-center justify-center sm:justify-start gap-3">
                     <Github size={18} color="black"/>
-                    <span className="font-medium text-black">View Work</span>
+                    <span className="font-medium text-black">View my Work</span>
                   </div>
                 </motion.a>
               </motion.div>

@@ -4,25 +4,25 @@ import { BookOpen, Award, Users } from 'lucide-react';
 
 export const Education = () => {
   const certifications = [
+     {
+      title: "Ethical Hacking essentials",
+      issuer: "EC Council",
+      date: "2025"
+    },
     {
       title: "Cyber Security and Privacy",
       issuer: "NpTell",
-      date: "2023"
-    },
-    {
-      title: "Ethical Hacking essentials",
-      issuer: "EC Council",
-      date: "2023"
+      date: "2024"
     },
     {
       title: "Foundations of Cybersecurity",
       issuer: "Google Coursera",
-      date: "2023"
+      date: "2024"
     },
     {
       title: "Python Fundamentals",
       issuer: "Infosys Springboard",
-      date: "2022"
+      date: "2024"
     }
   ];
 
@@ -124,7 +124,7 @@ export const Education = () => {
                 >
                   <h4 className="font-medium mb-2 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    Event Host at "Brand Artistry"
+                    Event Volunteering at "Brand Artistry"
                   </h4>
                   <p className="text-sm text-text-secondary">
                     Facilitated poster and logo design challenges at SRM Texus 2024, ensuring smooth event execution.
@@ -143,7 +143,7 @@ export const Education = () => {
                     Organizer for "Hello Hackers V9.0"
                   </h4>
                   <p className="text-sm text-text-secondary">
-                    As part of CHIPSET Club at SRM, helped organize an ethical hacking workshop featuring live demonstrations and cybersecurity awareness sessions.
+                    As part of CHIPSET Club at SRM, helped organize an ethical hacking workshop featuring live demonstrations and cybersecurity awareness sessions with over 150+ participants.
                   </p>
                 </motion.div>
               </div>
