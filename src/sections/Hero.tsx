@@ -114,14 +114,14 @@ export const Hero = () => {
                   <div className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-mono text-accent">
                     <TypeAnimation
                       sequence={[
-                        '> Cybersecurity_Expert.exe',
-                        2000,
-                        '> Full_Stack_Developer.py',
-                        2000,
+                        '> Cybersecurity_Student.exe',
+                        1000,
+                        '> Front_end_Developer.py',
+                        1000,
                         '> Problem_Solver.js',
-                        2000,
+                        1000,
                         '> Innovation_Architect.cpp',
-                        2000,
+                        1000,
                       ]}
                       wrapper="span"
                       speed={60}
