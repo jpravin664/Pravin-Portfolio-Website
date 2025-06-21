@@ -11,7 +11,7 @@ export const About = () => {
       duration: "2022-2026",
     },
     {
-      institution: "LALCHAND MILAPCHAND DADHA SENIOR SECONDARY SCHOOL",
+      institution: "LALCHAND MILAPCHAND DADHA SENIOR SECONDARY SCHOOL (CBSE)",
       degree: "Class XII",
       duration: "2021-2022",
     }

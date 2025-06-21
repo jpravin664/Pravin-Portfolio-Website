@@ -16,7 +16,7 @@ export const Projects = () => {
     "Integrated Google Safe Browsing and PhishTank APIs, with fallback detection via a 15k+ URL Kaggle dataset",
     "Achieved <1s latency and real-time alerts across Chrome, Edge, and Firefox"
   ],
-  github: "https://github.com/jpravin664",
+  github: "https://github.com/jpravin664/Phishing-Detection-Browser-Extension",
   live: "", // Add if deployed
   index: 0
 },
