@@ -1,126 +1,186 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+interface Skill {
+  name: string;
+  icon: string;
+}
+
 interface SkillCardProps {
   category: string;
-  skills: string[];
-  icon: React.ReactNode;
+  skills: Skill[];
   index: number;
 }
 
-export const SkillCard = ({ category, skills, icon, index }: SkillCardProps) => {
+export const SkillCard = ({ category, skills, index }: SkillCardProps) => {
   return (
-    <motion.div 
+    <motion.div
       className="relative group h-full overflow-hidden"
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ 
-        duration: 0.5, 
+      transition={{
+        duration: 0.5,
         delay: index * 0.1,
         type: "spring",
         stiffness: 100,
-        damping: 15
+        damping: 15,
       }}
       viewport={{ once: true, amount: 0.2 }}
-      whileHover={{ y: -12, scale: 1.02 }}
+      whileHover={{ y: -8, scale: 1.02 }}
     >
-      {/* Dynamic background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-      
-      {/* Animated border gradient */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 group-hover:bg-pos-100 opacity-0 group-hover:opacity-100 transition-all duration-1000 rounded-3xl blur-sm animate-gradient-x"></div>
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-900/10 via-blue-900/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Main card container */}
-   <div className="relative h-full rounded-3xl backdrop-blur-xl 
-bg-gradient-to-br from-purple-900/70 via-indigo-900/50 to-purple-800/60 
-border border-purple-300/20 group-hover:border-purple-500/40 
-transition-all duration-500 shadow-lg group-hover:shadow-purple-500/20">
+      <div className="relative h-full rounded-2xl bg-gradient-to-br from-sky-900/90 via-cyan-800/80 to-white/10 border border-cyan-400/20 group-hover:border-cyan-300/40 transition-all duration-500 shadow-xl group-hover:shadow-cyan-500/10 backdrop-blur-sm overflow-hidden">
+
         
-        {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-        
-        {/* Header section with icon */}
-        <div className="relative p-6 pb-4">
-          <div className="flex items-start justify-between mb-4">
-            <motion.div 
-              className="relative"
-              whileHover={{ rotate: [0, -10, 10, 0] }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* Icon background glow */}
-              <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-md"></div>
-              
-              <div className="relative p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-white/10 group-hover:border-primary/30 transition-all duration-500 backdrop-blur-sm">
-                <div className="text-primary group-hover:text-accent transition-colors duration-500 transform group-hover:scale-110">
-                  {icon}
-                </div>
-              </div>
-            </motion.div>
-            
-            {/* Floating indicator dots */}
-            <div className="flex gap-1 opacity-40 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="w-2 h-2 rounded-full bg-primary group-hover:animate-pulse"></div>
-              <div className="w-2 h-2 rounded-full bg-accent group-hover:animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-              <div className="w-2 h-2 rounded-full bg-primary group-hover:animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-            </div>
-          </div>
-          
-          {/* Category title */}
-          <div className="relative">
-            <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent group-hover:from-accent group-hover:via-primary group-hover:to-accent transition-all duration-700">
-              {category}
-            </h3>
-            
-            {/* Animated underline */}
-            <div className="relative h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-            </div>
-          </div>
+        {/* Floating bubbles effect */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-pink-500/10"
+              initial={{ 
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                width: Math.random() * 6 + 2,
+                height: Math.random() * 6 + 2
+              }}
+              animate={{
+                x: [null, Math.random() * 100],
+                y: [null, Math.random() * 100],
+                transition: {
+                  duration: Math.random() * 15 + 15,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }
+              }}
+            />
+          ))}
         </div>
         
-        {/* Skills section */}
-        <div className="px-8 pb-8">
-          <div className="grid grid-cols-2 gap-3">
+        {/* Glow effect */}
+        <div className="absolute -inset-2 bg-pink-500/5 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        {/* Category Title */}
+        <div className="relative p-6 pb-4">
+          <div className="flex items-center">
+            <motion.div 
+              className="w-2 h-8 rounded-full bg-gradient-to-b from-pink-400 to-fuchsia-500 mr-3"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
+            />
+            <h3 className="text-2xl font-bold text-white mb-6 relative">
+              {category}
+              <span className="absolute -bottom-2 left-0 w-24 h-1 bg-gradient-to-r from-pink-400 to-transparent"></span>
+
+            </h3>
+          </div>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="px-6 pb-8">
+          <div className="grid grid-cols-3 gap-4">
             {skills.map((skill, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 className="relative group/skill"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ 
-                  delay: index * 0.1 + i * 0.08,
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: index * 0.1 + i * 0.05,
                   type: "spring",
                   stiffness: 200,
-                  damping: 20
+                  damping: 20,
                 }}
-                whileHover={{ x: 4, scale: 1.02 }}
+                whileHover={{ scale: 1.1, y: -4 }}
               >
-                {/* Skill item background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl opacity-0 group-hover/skill:opacity-100 transition-all duration-300"></div>
-                
-                {/* Skill item border highlight */}
-                <div className="absolute inset-0 border border-transparent group-hover/skill:border-primary/20 rounded-xl transition-all duration-300"></div>
-                
-                <div className="relative p-3 rounded-xl bg-background/70 backdrop-blur-sm border border-white/10 group-hover/skill:border-white/20 transition-all duration-300 hover:bg-background/80">
-                  {/* Skill text */}
-                  <div className="text-sm font-medium text-text-secondary group-hover/skill:text-primary transition-colors duration-300 flex items-center gap-2">
-                    {/* Bullet point */}
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover/skill:bg-primary group-hover/skill:animate-pulse transition-all duration-300"></div>
-                    <span className="truncate">{skill}</span>
+                <div className="relative p-4 rounded-xl bg-cyan-800/30 border border-cyan-600/60 group-hover/skill:border-cyan-300 transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex flex-col items-center justify-center min-h-[100px]">
+
+                  
+                  {/* Skill Icon with enhanced glow */}
+                  <div className="mb-3 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-violet-500/20 rounded-lg opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300 blur-md scale-110"></div>
+                    <div className="relative w-12 h-12 flex items-center justify-center">
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className="w-10 h-10 object-contain group-hover/skill:scale-110 group-hover/skill:brightness-125 transition-transform duration-300 drop-shadow-lg"
+                        style={{
+                          filter: 'brightness(1.3) contrast(1.2) drop-shadow(0 0 4px rgba(236, 72, 153, 0.4))'
+                        }}
+                      />
+                    </div>
                   </div>
+
+                  {/* Skill Name with subtle animation */}
+                  <motion.div 
+                    className="text-center"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <span className="text-xs font-medium text-gray-300 group-hover/skill:text-white transition-colors duration-300 block leading-tight">
+                      {skill.name}
+                    </span>
+                  </motion.div>
+
+                  {/* Hover glow effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-pink-500/5 to-fuchsia-500/5 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Corner accents */}
+                  <div className="absolute top-2 right-2 w-2 h-2 border-t-2 border-r-2 border-pink-400/50 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-2 left-2 w-2 h-2 border-b-2 border-l-2 border-fuchsia-400/50 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+
+        {/* Bottom accent line with animation */}
+        <motion.div 
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-0 group-hover:opacity-60"
+          initial={{ scaleX: 0 }}
+          whileHover={{ scaleX: 1, opacity: 0.6 }}
+          transition={{ duration: 0.5 }}
+        />
         
-        {/* Bottom accent gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+        {/* Enhanced corner accents */}
+        <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-pink-500/30 group-hover:border-pink-400/60 transition-colors duration-500 rounded-tr-lg">
+          <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-fuchsia-500/30 group-hover:border-fuchsia-400/60 transition-colors duration-500 rounded-bl-lg">
+          <div className="absolute -bottom-0.5 -left-0.5 w-2 h-2 bg-fuchsia-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
         
-        {/* Corner decorative elements */}
-        <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-500 rounded-tr-lg"></div>
-        <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-accent/20 group-hover:border-accent/40 transition-colors duration-500 rounded-bl-lg"></div>
+        {/* Floating sparkles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-white/60"
+              initial={{ 
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                width: 1,
+                height: 1,
+                opacity: 0
+              }}
+              animate={{
+                width: [1, 2, 1],
+                height: [1, 2, 1],
+                opacity: [0, 0.8, 0],
+                transition: {
+                  duration: Math.random() * 3 + 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 5
+                }
+              }}
+            />
+          ))} 
+        </div>
       </div>
-    </motion.div>
+    </motion.div> 
   );
-}; 
+};
+ 
