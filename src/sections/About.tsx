@@ -9,7 +9,7 @@ export const About = () => {
       institution: "SRM UNIVERSITY RAMAPURAM",
       degree: "B.Tech Computer Science Engineering with specialization in Cyber Security",
       duration: "2022-2026",
-      CGPA: "8.92/10"
+      CGPA: "9.06/10"
     },
     {
       institution: "LALCHAND MILAPCHAND DADHA SENIOR SECONDARY SCHOOL (CBSE)",
